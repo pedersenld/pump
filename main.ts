@@ -19,8 +19,8 @@ howManyWaterings = 0
 cakLandSoil.displayMoisture(cakLandSoil.SoilPin.P0)
 basic.pause(1000)
 basic.forever(function () {
-    if (cakLandSoil.ifMoisture(cakLandSoil.SoilPin.P0, cakLandSoil.Mlevel.VERY_DRY)) {
-        basic.showIcon(IconNames.Happy)
+    if (cakLandSoil.ifMoisture(cakLandSoil.SoilPin.P0, cakLandSoil.Mlevel.WET)) {
+        basic.clearScreen()
     } else {
         basic.showIcon(IconNames.Umbrella)
         cakLandPump.startDuration(cakLand.BoardSide.RIGHT, 60, 4)
